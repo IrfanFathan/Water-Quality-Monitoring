@@ -22,6 +22,25 @@
         background-size: 300% 300%;
         animation: gradient 6s ease infinite;
     }
+
+    @keyframes float {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(3deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    .animate-float {
+        animation: float 8s ease-in-out infinite;
+    }
+
+    .animate-rotate {
+        animation: rotate 20s linear infinite;
+    }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -82,80 +101,211 @@
     </div>
 </nav>
 
-    <!-- Enhanced Hero Section -->
-    <section id="home" class="pt-32 pb-20 px-4">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h1 class="text-5xl font-bold text-gray-800 mb-6">
-                    Protect Water Resources with AI-Powered Monitoring
-                </h1>
-                <p class="text-gray-600 text-lg mb-8">
-                    Aqua Intel combines IoT sensors with deep learning to provide comprehensive water quality analysis and predictive contamination alerts in real-time.
-                </p>
-                <div class="flex gap-4">
-                    <button class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
-                        Live Demo
-                    </button>
-                    <button class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition">
-                        Documentation
-                    </button>
+  <!-- Modern Hero Section -->
+<section id="home" class="relative overflow-hidden pt-28 pb-32 px-4 dark:bg-gray-900/30">
+    <!-- Decorative SVG Background Elements -->
+    <div class="absolute inset-0 -z-10 opacity-15 dark:opacity-10">
+        <svg class="absolute top-20 -right-20 w-[800px] animate-float" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="M45.5,-62.5C59.6,-53.8,72.5,-42.3,76.9,-27.6C81.3,-12.8,77.3,5.3,70.6,20.3C63.9,35.3,54.6,47.3,43.3,57.1C32,66.9,18.7,74.5,2.9,70.7C-13,66.9,-26.4,51.8,-40.2,40.1C-54,28.5,-68.2,20.3,-73.3,8.3C-78.5,-3.7,-74.6,-19.4,-65.8,-32.2C-57,-45,-43.2,-55,-29.2,-63.8C-15.2,-72.6,-0.8,-80.3,12.5,-77.3C25.8,-74.3,51.6,-60.7,45.5,-62.5Z" 
+                class="text-blue-200 dark:text-cyan-900"/>
+        </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Content Section -->
+        <div class="relative space-y-8 z-10">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-800 dark:text-gray-100 leading-tight">
+                Next-Gen Water Conservation Through
+                <span class="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                    AI Analytics
+                </span>
+            </h1>
+            
+            <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                Harnessing IoT networks and predictive machine learning to safeguard aquatic ecosystems with real-time contamination tracking and automated quality control.
+            </p>
+
+            <!-- Interactive Buttons -->
+            <div class="flex flex-wrap gap-4">
+                <button class="group relative bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                    <span>Live Interactive Demo</span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+                </button>
+                
+                <button class="flex items-center gap-2 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 py-4 rounded-xl hover:border-blue-500 hover:text-blue-600 dark:hover:text-cyan-400 transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    Technical Documentation
+                </button>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-3 gap-4 mt-12">
+                <div class="backdrop-blur-lg bg-white/50 dark:bg-gray-800/50 p-4 rounded-xl border border-white/20 shadow-sm">
+                    <p class="text-3xl font-bold text-blue-600 dark:text-cyan-400">98.7%</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Detection Accuracy</p>
+                </div>
+                <div class="backdrop-blur-lg bg-white/50 dark:bg-gray-800/50 p-4 rounded-xl border border-white/20 shadow-sm">
+                    <p class="text-3xl font-bold text-blue-600 dark:text-cyan-400">24/7</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Real-time Monitoring</p>
+                </div>
+                <div class="backdrop-blur-lg bg-white/50 dark:bg-gray-800/50 p-4 rounded-xl border border-white/20 shadow-sm">
+                    <p class="text-3xl font-bold text-blue-600 dark:text-cyan-400">50ms</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Alert Response Time</p>
                 </div>
             </div>
-            <div class="relative">
-                <img src="/index.jpg" alt="System Overview" class="rounded-xl shadow-xl">
-                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-md">
-                    <div class="text-center">
-                        <p class="text-2xl font-bold text-blue-600">98.7%</p>
-                        <p class="text-sm text-gray-600">Detection Accuracy</p>
+        </div>
+
+        <!-- Graphic Section -->
+        <div class="relative lg:mt-0 mt-12">
+            <div class="relative rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-800 dark:to-gray-900 p-8 shadow-2xl">
+                <img src="/dashboard-preview.png" alt="AI Analytics Interface" class="rounded-xl shadow-lg w-full h-auto">
+                
+                <!-- Animated Status Indicator -->
+                <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 backdrop-blur-sm bg-white/80 dark:bg-gray-800/80 px-6 py-3 rounded-full border border-white/20 shadow-lg">
+                    <div class="h-3 w-3 bg-green-400 rounded-full animate-pulse"></div>
+                    <span class="text-sm font-medium text-gray-700 dark:text-gray-200">Live Data Streaming</span>
+                </div>
+            </div>
+
+            <!-- Floating Particles -->
+            <svg class="absolute -top-20 -right-20 w-72 h-72 animate-rotate" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="2" 
+                        class="text-blue-100 dark:text-cyan-900" stroke-dasharray="4 8"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Wave Divider -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+        <svg class="relative block" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" 
+                  class="fill-current text-blue-50 dark:text-gray-900"></path>
+        </svg>
+    </div>
+</section>
+
+ <!-- Modern Features Section -->
+<section id="features" class="relative py-24 bg-gradient-to-b from-white to-blue-50 dark:from-gray-900 dark:to-gray-900/80 px-4 overflow-hidden">
+    <!-- Decorative background elements -->
+    <div class="absolute inset-0 -z-10 opacity-20 dark:opacity-10">
+        <div class="absolute -top-32 -left-32 w-96 h-96 bg-blue-100/50 dark:bg-cyan-900/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-48 -right-48 w-96 h-96 bg-cyan-100/50 dark:bg-blue-900/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-4">
+                Intelligent Water Monitoring
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Advanced sensor fusion and predictive analytics for comprehensive water quality management
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Feature Card 1 -->
+            <div class="group relative backdrop-blur-lg bg-white/60 dark:bg-gray-800/50 rounded-2xl p-8 border border-white/20 dark:border-gray-700 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-700/30 dark:to-gray-800/30 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl -z-10"></div>
+                <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-4 dark:text-gray-100">Multi-Parameter Analysis</h3>
+                <div class="grid grid-cols-2 gap-2 text-sm">
+                    <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                        <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                        Turbidity (NTU)
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        pH Levels
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                        <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                        Temp (°C)
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                        <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                        TDS (ppm)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Card 2 -->
+            <div class="group relative backdrop-blur-lg bg-white/60 dark:bg-gray-800/50 rounded-2xl p-8 border border-white/20 dark:border-gray-700 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-700/30 dark:to-gray-800/30 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl -z-10"></div>
+                <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-4 dark:text-gray-100">LSTM Predictions</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    Deep learning model processing 50k+ data points with 92% forecast accuracy
+                </p>
+                <div class="mt-4 bg-gray-100 dark:bg-gray-700/30 rounded-full h-2">
+                    <div class="bg-gradient-to-r from-cyan-500 to-blue-600 w-4/5 h-2 rounded-full"></div>
+                </div>
+            </div>
+
+            <!-- Feature Card 3 -->
+            <div class="group relative backdrop-blur-lg bg-white/60 dark:bg-gray-800/50 rounded-2xl p-8 border border-white/20 dark:border-gray-700 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-700/30 dark:to-gray-800/30 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl -z-10"></div>
+                <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-4 dark:text-gray-100">Real-time Alerts</h3>
+                <div class="flex flex-wrap gap-2">
+                    <div class="flex items-center gap-2 px-3 py-1.5 bg-blue-100/50 dark:bg-blue-900/20 rounded-full transition-all hover:bg-blue-100 dark:hover:bg-blue-900/30">
+                        <svg class="w-4 h-4 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                        </svg>
+                        <span class="text-sm text-blue-600 dark:text-blue-300">Blynk App</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-3 py-1.5 bg-green-100/50 dark:bg-green-900/20 rounded-full transition-all hover:bg-green-100 dark:hover:bg-green-900/30">
+                        <svg class="w-4 h-4 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        <span class="text-sm text-green-600 dark:text-green-300">Email/SMS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Card 4 -->
+            <div class="group relative backdrop-blur-lg bg-white/60 dark:bg-gray-800/50 rounded-2xl p-8 border border-white/20 dark:border-gray-700 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-700/30 dark:to-gray-800/30 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl -z-10"></div>
+                <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM15 9l-3 3m0 0l-3 3m3-3V9"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-4 dark:text-gray-100">ESP32 Core</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                    Dual-core 32-bit LX6 microprocessor with ultra-low power consumption
+                </p>
+                <div class="flex gap-2 text-sm">
+                    <div class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded-md">
+                        <svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
+                        </svg>
+                        <span class="dark:text-gray-300">Wi-Fi 4</span>
+                    </div>
+                    <div class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded-md">
+                        <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M4.59 4.89A2 2 0 0 0 3.25 6.5v11a2 2 0 0 0 2 2h13.5a2 2 0 0 0 1.66-.89l-8.75-6.5-8.75 6.5zm16.08 1.53l-8.75 6.5a1 1 0 0 1-1.17 0l-8.75-6.5A2 2 0 0 1 3.25 6.5v11c0 .16.04.32.1.46l8.75-6.5a1 1 0 0 1 1.17 0l8.75 6.5c.06-.14.1-.3.1-.46v-11a2 2 0 0 0-2.6-1.91z"/>
+                        </svg>
+                        <span class="dark:text-gray-300">BLE 5.0</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Detailed Features Section -->
-    <section id="features" class="py-20 bg-white px-4">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-16">Comprehensive Monitoring System</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition">
-                    <i class="fas fa-vial text-4xl text-blue-600 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Multi-Parameter Analysis</h3>
-                    <p class="text-gray-600">Simultaneous monitoring of:
-                        <ul class="list-disc pl-4 mt-2 text-sm">
-                            <li>Turbidity (NTU)</li>
-                            <li>pH Levels (0-14)</li>
-                            <li>Temperature (°C)</li>
-                            <li>TDS (ppm)</li>
-                        </ul>
-                    </p>
-                </div>
-
-                <div class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition">
-                    <i class="fas fa-brain text-4xl text-blue-600 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">LSTM Predictions</h3>
-                    <p class="text-gray-600">Deep learning model trained on 50,000+ data points for contamination forecasting</p>
-                </div>
-
-                <div class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition">
-                    <i class="fas fa-broadcast-tower text-4xl text-blue-600 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Real-time Alerts</h3>
-                    <p class="text-gray-600">Instant notifications via:
-                        <span class="block mt-2">
-                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Blynk App</span>
-                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm ml-2">Email/SMS</span>
-                        </span>
-                    </p>
-                </div>
-
-                <div class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition">
-                    <i class="fas fa-microchip text-4xl text-blue-600 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">ESP32 Core</h3>
-                    <p class="text-gray-600">Dual-core 32-bit processor with Wi-Fi/Bluetooth connectivity for reliable data transmission</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
     <!-- Technology Stack Section -->
     <section class="py-20 bg-gray-50 px-4">
